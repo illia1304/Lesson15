@@ -21,6 +21,24 @@
         }
 
 
+        public int Count()
+        {
+            return stack.Count;
+        }
+        public T Peek()
+        {
+            return stack[stack.Count - 1];
+        }
+        public T CopyToArr(T[] array, int i)
+        {
+            foreach (T item in stack)
+            {
+                array[i] = item;
+                i++;
+            }
+            return array[stack.Count - 1];
+        }
+
     }
     class Programme
     {
