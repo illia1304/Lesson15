@@ -1,14 +1,26 @@
-﻿namespace Lesson14
+﻿namespace Lesson15
 {
     public class Stack<T>
     {
         public Stack() { }
 
         public List<T> stack = new List<T>();
-        public void Push()
+        public void Push(T item)
         {
-
+            stack.Add(item);
         }
+        public void Pop()
+        {
+            int lastElement = stack.Count - 1;
+            stack.RemoveAt(lastElement);
+        }
+
+        public void Clear()
+        {
+            stack.Clear();
+        }
+
+
     }
     class Programme
     {
