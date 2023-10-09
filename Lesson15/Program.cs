@@ -44,7 +44,40 @@
     {
         static void Main(string[] args)
         {
+            Stack<int> stack = new Stack<int>();
 
+            stack.Push(1);
+            stack.Push(2);
+            stack.Push(3);
+            stack.Push(4);
+            stack.Push(5);
+
+            foreach (var item in stack.stack)
+            {
+                Console.WriteLine(item);
+            }
+
+            Console.WriteLine("/////////////////////////");
+            stack.Pop();
+            stack.Pop();
+            foreach (var item in stack.stack)
+            {
+                Console.WriteLine(item);
+            }
+            Console.WriteLine("/////////////////////////");
+            Console.WriteLine(stack.Peek());
+
+            Console.WriteLine("/////////////////////////");
+            Console.WriteLine(stack.Count());
+
+            Console.WriteLine("/////////////////////////");
+            int[] array = new int[stack.Count()];
+            stack.CopyToArr(array, 0);
+
+            for (int i = 0; i < array.Length; i++)
+            {
+                Console.WriteLine(array[i]);
+            }
         }
     }
 }
